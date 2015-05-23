@@ -12,4 +12,83 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+/*
+Jakieś plany na lato? Szybko zaznacz w kalendarzu 7-19 lipca i aplikuj na Bootcamp!. Nauczysz się Ruby on Rails(za darmo!) i spędzisz niesamowite 2 tygodnie we Wrocławiu :D To będą wakacje inne niż wszystkie... ;) niezapomniane wspomnienia gwaratnowane!
+
+Do you have any plans for summer? Quickly mark 7-19 of July in your calendar and apply for Bootcamp! You will learn Ruby on Rails(for free!) and spend amazing two weeks in Wroclaw :D That holidays can be completely different than any others... ;) unforgettable memories guaranteed!
+*/
+
+ a {
+  color: #0A4600;
+ }
+
+ p {
+  text-align: justify;;
+ }
+
+ .centered-text {
+  text-align: center;
+ }
+
+ .active {
+  background-color: #3C8D2F !important;
+ }
+
+ .button {
+  background-color: #3C8D2F !important;
+ }
+
+ .button:hover {
+  background-color: #1E6912 !important;
+ }
+
+ #step-section a {
+  color: inherit;;
+ }
+
+.link-icon {
+  margin-bottom: 10px;
+}
+
+.diagram {
+  margin-top: 50px;
+ }
+
+.footer {
+  background: #333;
+  padding: 14px 0 10px;
+}
+
+.footer_description {
+  margin: 6px 0 0;
+  font-size: 0.75rem;
+  color: #666;
+}
+ #responsive-gallery-large {
+  background: url(../assets/toolbelt.png) #1e6912;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  text-align: left;
+  position: relative;
+  padding: 80px 20px 0 20px;
+  z-index: 50;
+  overflow: visable;
+  margin-bottom: 2rem;
+}
+
+#responsive-gallery-large h1 {
+  font-size: 4em;
+  color: #fff;
+  margin-bottom: 0;
+  line-height: 100%;
+}
+
+#responsive-gallery-large h4 {
+  font-size: 1.35em;
+  color: #fff;
+  font-weight: 300;
+}

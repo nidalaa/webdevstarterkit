@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
+//= require foundation/foundation.topbar
+//= require application.react.js
+ window.onload = function() {
+        $(document).foundation();
+};
+
 //= require turbolinks
-//= require App.react.js
