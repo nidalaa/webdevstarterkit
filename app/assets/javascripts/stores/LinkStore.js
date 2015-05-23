@@ -45,6 +45,23 @@ var LinkStore = assign({}, EventEmitter.prototype, {
     return stepLinks;
   },
 
+  create: function(stepId, linkData) {
+    linkData['step_id'] = stepId;
+
+    $.ajax({
+      url: "/links",
+      dataType: 'json',
+      type: 'POST',
+      data: linkData,
+      success: function(data) {
+        this.fetchLinks();
+      }.bind(this),
+      error: function(xhr, status, err) {
+        alert("Error during link creation. Try to refresh page, please.")
+      }.bind(this)
+    });
+  },
+
   emitChange: function() {
     this.emit(CHANGE_EVENT);
   },
@@ -70,6 +87,11 @@ LinkStore.dispatchToken = AppDispatcher.register(function(action) {
 
     case Constants.TRANSITION:
       AppDispatcher.waitFor([StepStore.dispatchToken]);
+      LinkStore.emitChange();
+      break;
+
+     case Constants.CREATE:
+      LinkStore.create(action.stepId, action.linkData)
       LinkStore.emitChange();
       break;
 

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
    root 'spa#index'
 
    resources :steps, only: [:index]
-   resources :links, only: [:index]
+   resources :links, only: [:index, :create]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

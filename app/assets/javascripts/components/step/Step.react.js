@@ -5,10 +5,11 @@ var React = require('react');
 var StepStore = require('../../stores/StepStore');
 var LinkStore = require('../../stores/LinkStore');
 
-var Title = require('../Title.react');
+var Title = require('../basic/Title.react');
 var DescriptionLeft = require('./DescriptionLeft.react');
 var DiagramRight = require('./DiagramRight.react');
 var LinksSection = require('../links_list/LinksSection.react');
+var LinkForm = require('../links_list/LinkForm.react');
 
 
 function getStateFromStores() {
@@ -62,6 +63,13 @@ var Step = React.createClass({
             <div className="small-12 medium-12 columns">
               <h3>Useful links</h3>
               { linksList }
+            </div>
+          </div>
+          <div className="row">
+            <hr></hr>
+            <div className="small-12 medium-12 columns">
+              <h3>Add new link</h3>
+              <LinkForm stepId={step.id} />
             </div>
           </div>
           
